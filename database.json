@@ -1,0 +1,232 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "username": "ductt",
+      "password": "123456",
+      "role": "user"
+    }
+  ],
+  "primaryCategories": [
+    { "id": 1, "name": "Electronics" },
+    { "id": 2, "name": "Fashion" },
+    { "id": 3, "name": "Home Supplies" }
+  ],
+  "categories": [
+    { "id": 1, "name": "Smartphones", "primaryCategoryId": 1 },
+    { "id": 2, "name": "Laptops", "primaryCategoryId": 1 },
+    { "id": 3, "name": "Men's Shirts", "primaryCategoryId": 2 },
+    { "id": 4, "name": "Women's Dresses", "primaryCategoryId": 2 },
+    { "id": 5, "name": "Blenders", "primaryCategoryId": 3 },
+    { "id": 6, "name": "Vacuum Cleaners", "primaryCategoryId": 3 }
+  ],
+  "brands": [
+    {
+      "id": 1,
+      "name": "Apple",
+      "categoryIds": [1, 2]
+    },
+    {
+      "id": 2,
+      "name": "Samsung",
+      "categoryIds": [1, 2]
+    },
+    {
+      "id": 3,
+      "name": "Google",
+      "categoryIds": [1, 2]
+    },
+    {
+      "id": 4,
+      "name": "Dell",
+      "categoryIds": [1, 2]
+    },
+    {
+      "id": 5,
+      "name": "Dyson",
+      "categoryIds": [6]
+    },
+    {
+      "id": 6,
+      "name": "NutriBullet",
+      "categoryIds": [5]
+    },
+    {
+      "id": 7,
+      "name": "Zara",
+      "categoryIds": [3, 4]
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "iPhone 13",
+      "description": "Latest model with A15 chip",
+      "price": 999,
+      "image": "https://example.com/images/iphone13.jpg",
+      "categoryId": 1,
+      "brandId": 1
+    },
+    {
+      "id": 2,
+      "name": "Samsung Galaxy S21",
+      "description": "High-performance Android smartphone",
+      "price": 850,
+      "image": "https://example.com/images/galaxys21.jpg",
+      "categoryId": 1,
+      "brandId": 2
+    },
+    {
+      "id": 3,
+      "name": "Google Pixel 6",
+      "description": "Google's flagship with stock Android",
+      "price": 799,
+      "image": "https://example.com/images/pixel6.jpg",
+      "categoryId": 1,
+      "brandId": 3
+    },
+
+    {
+      "id": 4,
+      "name": "MacBook Air M1",
+      "description": "Apple's lightweight laptop with M1 chip",
+      "price": 999,
+      "image": "https://example.com/images/macbookair.jpg",
+      "categoryId": 2,
+      "brandId": 1
+    },
+    {
+      "id": 5,
+      "name": "Dell XPS 13",
+      "description": "Ultra-thin, powerful laptop",
+      "price": 1199,
+      "image": "https://example.com/images/dellxps13.jpg",
+      "categoryId": 2,
+      "brandId": 4
+    },
+    {
+      "id": 6,
+      "name": "Dell Inspiron 15",
+      "description": "Convertible laptop with touch screen",
+      "price": 1099,
+      "image": "https://example.com/images/hpspectre.jpg",
+      "categoryId": 2,
+      "brandId": 4
+    },
+
+    {
+      "id": 7,
+      "name": "Casual Checkered Shirt",
+      "description": "Comfortable and stylish for daily wear",
+      "price": 45,
+      "image": "https://example.com/images/casualshirt.jpg",
+      "categoryId": 3,
+      "brandId": 5
+    },
+    {
+      "id": 8,
+      "name": "Slim Fit Dress Shirt",
+      "description": "Perfect for formal occasions",
+      "price": 60,
+      "image": "https://example.com/images/slimfitshirt.jpg",
+      "categoryId": 3,
+      "brandId": 5
+    },
+    {
+      "id": 9,
+      "name": "Linen Summer Shirt",
+      "description": "Light and breathable for hot weather",
+      "price": 50,
+      "image": "https://example.com/images/linenshirt.jpg",
+      "categoryId": 3,
+      "brandId": 5
+    },
+    {
+      "id": 10,
+      "name": "Floral Summer Dress",
+      "description": "Light and colorful summer dress",
+      "price": 80,
+      "image": "https://example.com/images/summerdress.jpg",
+      "categoryId": 4,
+      "brandId": 5
+    },
+    {
+      "id": 11,
+      "name": "Cocktail Dress",
+      "description": "Elegant dress for evening events",
+      "price": 120,
+      "image": "https://example.com/images/cocktaildress.jpg",
+      "categoryId": 4,
+      "brandId": 5
+    },
+    {
+      "id": 12,
+      "name": "Casual T-Shirt Dress",
+      "description": "Simple and comfy for everyday wear",
+      "price": 40,
+      "image": "https://example.com/images/tshirtdress.jpg",
+      "categoryId": 4,
+      "brandId": 5
+    },
+    {
+      "id": 13,
+      "name": "NutriBullet Pro",
+      "description": "Powerful blender for smoothies",
+      "price": 120,
+      "image": "https://example.com/images/nutribullet.jpg",
+      "categoryId": 5,
+      "brandId": 4
+    },
+    {
+      "id": 14,
+      "name": "Vitamix 5200",
+      "description": "Professional-grade blender",
+      "price": 400,
+      "image": "https://example.com/images/vitamix.jpg",
+      "categoryId": 5,
+      "brandId": 4
+    },
+    {
+      "id": 15,
+      "name": "Oster Pro 1200",
+      "description": "Versatile blender with food processing capability",
+      "price": 100,
+      "image": "https://example.com/images/oster.jpg",
+      "categoryId": 5,
+      "brandId": 4
+    },
+    {
+      "id": 16,
+      "name": "Dyson V11",
+      "description": "High-performance cordless vacuum",
+      "price": 600,
+      "image": "https://example.com/images/dysonv11.jpg",
+      "categoryId": 6,
+      "brandId": 3
+    },
+    {
+      "id": 17,
+      "name": "Roomba i7+",
+      "description": "Robot vacuum with self-emptying capability",
+      "price": 800,
+      "image": "https://example.com/images/roomba.jpg",
+      "categoryId": 6,
+      "brandId": 3
+    },
+    {
+      "id": 18,
+      "name": "Shark Navigator",
+      "description": "Upright vacuum with powerful suction",
+      "price": 200,
+      "image": "https://example.com/images/sharknavigator.jpg",
+      "categoryId": 6,
+      "brandId": 3
+    }
+  ]
+}
