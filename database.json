@@ -2,65 +2,126 @@
   "user": [
     {
       "id": 1,
-      "username": "admin",
+      "fullname": "admin",
+      "email": "admin@example.com",
       "password": "admin",
       "role": "admin"
     },
     {
       "id": 2,
-      "username": "ductt",
+      "username": "Tran Tien Duc",
+      "email": "ductt@example.com",
       "password": "123456",
       "role": "user"
+    },
+    {
+      "fullname": "tran duc",
+      "email": "tranduc2004nd01@gmail.com",
+      "password": "123456",
+      "role": "user",
+      "id": 3
     }
   ],
   "primaryCategories": [
-    { "id": 1, "name": "Electronics" },
-    { "id": 2, "name": "Fashion" },
-    { "id": 3, "name": "Home Supplies" }
+    {
+      "id": 1,
+      "name": "Electronics"
+    },
+    {
+      "id": 2,
+      "name": "Fashion"
+    },
+    {
+      "id": 3,
+      "name": "Home Supplies"
+    }
   ],
   "categories": [
-    { "id": 1, "name": "Smartphones", "primaryCategoryId": 1 },
-    { "id": 2, "name": "Laptops", "primaryCategoryId": 1 },
-    { "id": 3, "name": "Men's Shirts", "primaryCategoryId": 2 },
-    { "id": 4, "name": "Women's Dresses", "primaryCategoryId": 2 },
-    { "id": 5, "name": "Blenders", "primaryCategoryId": 3 },
-    { "id": 6, "name": "Vacuum Cleaners", "primaryCategoryId": 3 }
+    {
+      "id": 1,
+      "name": "Smartphones",
+      "primaryCategoryId": 1
+    },
+    {
+      "id": 2,
+      "name": "Laptops",
+      "primaryCategoryId": 1
+    },
+    {
+      "id": 3,
+      "name": "Men's Shirts",
+      "primaryCategoryId": 2
+    },
+    {
+      "id": 4,
+      "name": "Women's Dresses",
+      "primaryCategoryId": 2
+    },
+    {
+      "id": 5,
+      "name": "Blenders",
+      "primaryCategoryId": 3
+    },
+    {
+      "id": 6,
+      "name": "Vacuum Cleaners",
+      "primaryCategoryId": 3
+    }
   ],
   "brands": [
     {
       "id": 1,
       "name": "Apple",
-      "categoryIds": [1, 2]
+      "categoryIds": [
+        1,
+        2
+      ]
     },
     {
       "id": 2,
       "name": "Samsung",
-      "categoryIds": [1, 2]
+      "categoryIds": [
+        1,
+        2
+      ]
     },
     {
       "id": 3,
       "name": "Google",
-      "categoryIds": [1, 2]
+      "categoryIds": [
+        1,
+        2
+      ]
     },
     {
       "id": 4,
       "name": "Dell",
-      "categoryIds": [1, 2]
+      "categoryIds": [
+        1,
+        2
+      ]
     },
     {
       "id": 5,
       "name": "Dyson",
-      "categoryIds": [6]
+      "categoryIds": [
+        6
+      ]
     },
     {
       "id": 6,
       "name": "NutriBullet",
-      "categoryIds": [5]
+      "categoryIds": [
+        5
+      ]
     },
     {
       "id": 7,
       "name": "Zara",
-      "categoryIds": [3, 4]
+      "categoryIds": [
+        3,
+        4
+      ]
     }
   ],
   "products": [
@@ -91,7 +152,6 @@
       "categoryId": 1,
       "brandId": 3
     },
-
     {
       "id": 4,
       "name": "MacBook Air M1",
@@ -119,7 +179,6 @@
       "categoryId": 2,
       "brandId": 4
     },
-
     {
       "id": 7,
       "name": "Casual Checkered Shirt",

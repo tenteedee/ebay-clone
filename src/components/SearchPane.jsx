@@ -1,26 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 export default function SearchPane() {
   const [category, setCategory] = useState('All Categories');
   const [searchTerm, setSearchTerm] = useState('');
+  const [primaryCategories, setPrimaryCategories] = useState([]);
+  const [categories, setCategories] = useState([]);
 
-  const categories = [
-    'Explore (New!)',
-    'Saved',
-    'Electronics',
-    'Motors',
-    'Fashion',
-    'Collectibles and Art',
-    'Sports',
-    'Health & Beauty',
-    'Industrial equipment',
-    'Home & Garden',
-    'Deals',
-    'Sell',
-  ];
+  useEffect(() => {
+    // Gọi API để lấy danh sách primaryCategories và categories
+    const fetchCategories = async () => {
+      try {
+        const primaryResponse = await axios.get('http://localhost:9999/primaryCategories');
+        const categoriesResponse = await axios.get('http://localhost:9999/categories');
+        setPrimaryCategories(primaryResponse.data);
+        setCategories(categoriesResponse.data);
+      } catch (error) {
+        console.error('Error fetching categories:', error);
+      }
+    };
+    fetchCategories();
+  }, []);
+
+  // Lấy các categories tương ứng với mỗi primaryCategoryId
+  const getCategoriesForPrimary = (primaryCategoryId) => {
+    return categories.filter(cat => cat.primaryCategoryId === primaryCategoryId);
+  };
 
   return (
-    <div className="bg-white py-4 ">
+    <div className="bg-white py-4">
       <div className="flex items-center justify-between max-w-7xl mx-auto">
         <div className="flex items-center space-x-8">
           <a href="/" className="text-3xl font-bold text-blue-600">
@@ -32,17 +40,24 @@ export default function SearchPane() {
               <span className="ml-1">▼</span>
             </button>
             <div
-              className="absolute hidden group-hover:block left-0 mt-2 w-48 bg-white border border-gray-300 rounded shadow-lg justify-between z-50"
-              style={{ zIndex: 50 }}
+              className="absolute hidden group-hover:block left-0 mt-2 w-64 bg-white border border-gray-300 rounded shadow-lg z-50 p-4"
+              // style={{ zIndex: 50 }}
             >
-              {categories.map((cat, index) => (
-                <a
-                  key={index}
-                  href={`/category/${cat.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="block px-4 py-2 hover:bg-gray-100"
-                >
-                  {cat}
-                </a>
+              {primaryCategories.map((primaryCategory) => (
+                <div key={primaryCategory.id} className="mb-4">
+                  {/* Primary Category in đậm */}
+                  <div className="font-bold mb-2">{primaryCategory.name}</div>
+                  {/* Các categories tương ứng */}
+                  {getCategoriesForPrimary(primaryCategory.id).map((category) => (
+                    <a
+                      key={category.id}
+                      href={`/category/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                      {category.name}
+                    </a>
+                  ))}
+                </div>
               ))}
             </div>
           </div>
@@ -59,12 +74,12 @@ export default function SearchPane() {
             <select
               value={category}
               onChange={(e) => setCategory(e.target.value)}
-              className="absolute right-0 top-0 bottom-0 w-32 border-l border-gray-300 bg-gray-100 rounded-r-full px-2 focus:outline-none"
+              className="absolute right-0 top-0 bottom-0 w-48 border-l border-gray-300 bg-gray-100 rounded-r-full px-2 focus:outline-none"
             >
               <option>All Categories</option>
-              {categories.map((cat, index) => (
-                <option key={index} value={cat}>
-                  {cat}
+              {primaryCategories.map((cat) => (
+                <option key={cat.id} value={cat.name}>
+                  {cat.name}
                 </option>
               ))}
             </select>

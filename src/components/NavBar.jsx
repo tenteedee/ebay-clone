@@ -1,34 +1,44 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 export default function NavBar() {
-  const [category, setCategory] = useState('All Categories');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [primaryCategories, setPrimaryCategories] = useState([]);
 
-  const categories = [
-    'Explore (New!)',
-    'Saved',
-    'Electronics',
-    'Motors',
-    'Fashion',
-    'Collectibles and Art',
-    'Sports',
-    'Health & Beauty',
-    'Industrial equipment',
-    'Home & Garden',
-    'Deals',
-    'Sell',
-  ];
+  // Gọi API để lấy danh sách primaryCategories
+  useEffect(() => {
+    const fetchPrimaryCategories = async () => {
+      try {
+        const response = await axios.get(
+          'http://localhost:9999/primaryCategories'
+        );
+        setPrimaryCategories(response.data); // Lưu dữ liệu từ API vào state
+      } catch (error) {
+        console.error('Error fetching primary categories:', error);
+      }
+    };
+    fetchPrimaryCategories();
+  }, []);
 
   return (
     <nav className="bg-white border-b border-gray-300">
       <ul className="flex space-x-6 text-sm overflow-x-auto py-2 max-w-7xl mx-auto">
-        {categories.map((category, index) => (
-          <li key={index} className="whitespace-nowrap">
+        <li className="whitespace-nowrap">
+          <a href="#" className="hover:text-blue-600 hover:underline">
+            Explore (NEW!)
+          </a>
+        </li>
+        <li className="whitespace-nowrap">
+          <a href="#" className="hover:text-blue-600 hover:underline">
+            Saved
+          </a>
+        </li>
+        {primaryCategories.map((category) => (
+          <li key={category.id} className="whitespace-nowrap">
             <a
-              href={`/${category.toLowerCase().replace(/\s+/g, '-')}`}
-              className="hover:text-blue-600"
+              href={`/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
+              className="hover:text-blue-600 hover:underline"
             >
-              {category}
+              {category.name}
             </a>
           </li>
         ))}
