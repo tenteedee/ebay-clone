@@ -13,11 +13,7 @@ export default function NavBar() {
             Explore (NEW!)
           </a>
         </li>
-        <li className="whitespace-nowrap">
-          <a href="#" className="hover:text-blue-600 hover:underline">
-            Saved
-          </a>
-        </li>
+
         {primaryCategories.map((primaryCategory) => (
           <li key={primaryCategory.id} className="whitespace-nowrap">
             <a
