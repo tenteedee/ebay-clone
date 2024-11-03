@@ -24,6 +24,7 @@ function Cart() {
                 )
             );
         }
+        alert("You've updated your cart")
     };
 
     return (
