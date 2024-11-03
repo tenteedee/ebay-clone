@@ -1,19 +1,38 @@
 import React, { useState, useEffect } from 'react';
+import WatchlistDropdown from './WatchlistDropdown';
 
 export default function TopBar() {
   const [user, setUser] = useState(null);
+  const [watchlist, setWatchlist] = useState([]);
+  const [isWatchlistOpen, setIsWatchlistOpen] = useState(false);
 
-  // Kiểm tra token trong localStorage
+  // Load user info and watchlist from localStorage
   useEffect(() => {
     const storedUser = localStorage.getItem('token');
+    const storedWatchlist = JSON.parse(localStorage.getItem('watchlist')) || [];
+
     if (storedUser) {
-      setUser(JSON.parse(storedUser)); // Lấy thông tin người dùng từ localStorage
+      setUser(JSON.parse(storedUser));
     }
+    setWatchlist(storedWatchlist);
   }, []);
 
+  // Logout function
   const handleLogout = () => {
-    localStorage.removeItem('token'); // Xóa token khỏi localStorage
-    setUser(null); // Reset lại user
+    localStorage.removeItem('token');
+    setUser(null);
+  };
+
+  // Toggle watchlist display
+  const toggleWatchlist = () => {
+    setIsWatchlistOpen(!isWatchlistOpen);
+  };
+
+  // Remove item from watchlist
+  const handleRemoveFromWatchlist = (id) => {
+    const updatedWatchlist = watchlist.filter((item) => item.id !== id);
+    setWatchlist(updatedWatchlist);
+    localStorage.setItem('watchlist', JSON.stringify(updatedWatchlist));
   };
 
   return (
@@ -60,36 +79,16 @@ export default function TopBar() {
           <a href="/sell" className="hover:underline">
             Sell
           </a>
-          <div className="relative group">
-            <button className="hover:underline">Watchlist ▼</button>
-            <div
-              className="absolute hidden group-hover:block right-0 mt-2 w-48 bg-white border border-gray-300 rounded shadow-lg z-50"
-              style={{ zIndex: 1 }}
-            >
-              <a
-                href="/watchlist"
-                className="block px-4 py-2 hover:bg-gray-100"
-              >
-                View Watchlist
-              </a>
-            </div>
-          </div>
-          <div className="relative group">
-            <button className="hover:underline">My eBay ▼</button>
-            <div
-              className="absolute hidden group-hover:block right-0 mt-2 w-48 bg-white border border-gray-300 rounded shadow-lg"
-              style={{ zIndex: 1 }}
-            >
-              <a href="/my-ebay" className="block px-4 py-2 hover:bg-gray-100">
-                Summary
-              </a>
-              <a
-                href="/my-ebay/bids"
-                className="block px-4 py-2 hover:bg-gray-100"
-              >
-                Bids/Offers
-              </a>
-            </div>
+          <div className="relative">
+            <button onClick={toggleWatchlist} className="hover:underline">
+              Watchlist ▼
+            </button>
+            {isWatchlistOpen && (
+              <WatchlistDropdown
+                watchlist={watchlist}
+                onRemove={handleRemoveFromWatchlist}
+              />
+            )}
           </div>
           <button aria-label="Notifications" className="hover:text-blue-600">
             🔔

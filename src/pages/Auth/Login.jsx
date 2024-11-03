@@ -19,7 +19,7 @@ export default function LoginPage() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:9999/user', {
+      const response = await axios.get('http://localhost:9999/user', {
         params: {
           email,
           password,

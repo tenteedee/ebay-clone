@@ -5,15 +5,16 @@ import {
   Route,
   useLocation,
 } from 'react-router-dom';
-import { DataProvider } from './context/Context.jsx';
+import { EbayProvider } from './context/Context.jsx';
 import Footer from './components/Footer.jsx';
 import Header from './components/Header.jsx';
 import NotFound from './pages/Error/NotFound.jsx';
 import Home from './pages/Home/Home.jsx';
 import Register from './pages/Auth/Register.jsx';
 import Login from './pages/Auth/Login.jsx';
-import CategoriesPage from './pages/Categories/Categories.jsx';
-import ProductsListPage from './pages/Products/ProductListPage.jsx';
+import CategoriesPage from './pages/Products/CategoriesPage.jsx';
+import ProductsListPage from './pages/Products/ProductsListPage.jsx';
+import ProductDetail from './pages/Products/ProductDetail.jsx';
 
 function App() {
   const location = useLocation();
@@ -22,7 +23,7 @@ function App() {
   const noHeaderFooterPaths = ['/login', '/register'];
 
   return (
-    <DataProvider>
+    <EbayProvider>
       {!noHeaderFooterPaths.includes(location.pathname) && <Header />}
 
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,12 +36,13 @@ function App() {
             path="/:primaryCategoryId/:categoryId"
             element={<ProductsListPage />}
           />
+          <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
       </div>
 
       {!noHeaderFooterPaths.includes(location.pathname) && <Footer />}
-    </DataProvider>
+    </EbayProvider>
   );
 }
 

@@ -113,8 +113,28 @@
     },
     {
       "id": 7,
+      "name": "Addidas",
+      "categoryIds": [3, 4]
+    },
+    {
+      "id": 8,
+      "name": "H&M",
+      "categoryIds": [3, 4]
+    },
+    {
+      "id": 9,
       "name": "Zara",
       "categoryIds": [3, 4]
+    },
+    {
+      "id": 10,
+      "name": "Sealy",
+      "categoryIds": [5]
+    },
+    {
+      "id": 11,
+      "name": "Sun House",
+      "categoryIds": [6]
     }
   ],
   "products": [
@@ -123,7 +143,11 @@
       "name": "iPhone 12 Pro Max",
       "description": "Latest model with A15 chip",
       "price": 999,
-      "image": "https://i.ebayimg.com/images/g/vhsAAOSwQW1iuuya/s-l640.jpg",
+      "images": [
+        "https://i.ebayimg.com/images/g/vhsAAOSwQW1iuuya/s-l640.jpg",
+        "https://i.ebayimg.com/images/g/vhsAAOSwQW1iuuya/s-l640.jpg",
+        "https://i.ebayimg.com/images/g/vhsAAOSwQW1iuuya/s-l640.jpg"
+      ],
       "categoryId": 1,
       "brandId": 1
     },
@@ -132,7 +156,11 @@
       "name": "Samsung Galaxy S22 Ultra",
       "description": "High-performance Android smartphone",
       "price": 850,
-      "image": "https://i.ebayimg.com/images/g/pNIAAOSwOaJmE8PM/s-l64.webp",
+      "images": [
+        "https://i.ebayimg.com/images/g/pNIAAOSwOaJmE8PM/s-l64.webp",
+        "https://i.ebayimg.com/images/g/pNIAAOSwOaJmE8PM/s-l64.webp",
+        "https://i.ebayimg.com/images/g/rIAAOSwOaJmE8PM/s-l64.webp"
+      ],
       "categoryId": 1,
       "brandId": 2
     },
@@ -141,7 +169,11 @@
       "name": "Google Pixel 6",
       "description": "Google's flagship with stock Android",
       "price": 799,
-      "image": "https://i.ebayimg.com/images/g/IG4AAOSwD5JnG7Zx/s-l500.webp",
+      "images": [
+        "https://i.ebayimg.com/images/g/IG4AAOSwD5JnG7Zx/s-l500.webp",
+        "https://i.ebayimg.com/images/g/JK4AAOSwD5JnG7Zx/s-l500.webp",
+        "https://i.ebayimg.com/images/g/JM4AAOSwD5JnG7Zx/s-l500.webp"
+      ],
       "categoryId": 1,
       "brandId": 3
     },
@@ -150,7 +182,11 @@
       "name": "MacBook Air M1",
       "description": "Apple's lightweight laptop with M1 chip",
       "price": 999,
-      "image": "https://i.ebayimg.com/images/g/ZkEAAOSwW-Bmo-jx/s-l400.webp",
+      "images": [
+        "https://i.ebayimg.com/images/g/ZkEAAOSwW-Bmo-jx/s-l400.webp",
+        "https://i.ebayimg.com/images/g/ZoEAAOSwW-Bmo-jx/s-l400.webp",
+        "https://i.ebayimg.com/images/g/ZmEAAOSwW-Bmo-jx/s-l400.webp"
+      ],
       "categoryId": 2,
       "brandId": 1
     },
@@ -159,7 +195,11 @@
       "name": "Dell XPS 13",
       "description": "Ultra-thin, powerful laptop",
       "price": 1199,
-      "image": "https://i.ebayimg.com/images/g/re4AAOSwS8Zm8sHo/s-l400.webp",
+      "images": [
+        "https://i.ebayimg.com/images/g/re4AAOSwS8Zm8sHo/s-l400.webp",
+        "https://i.ebayimg.com/images/g/se4AAOSwS8Zm8sHo/s-l400.webp",
+        "https://i.ebayimg.com/images/g/te4AAOSwS8Zm8sHo/s-l400.webp"
+      ],
       "categoryId": 2,
       "brandId": 4
     },
@@ -168,7 +208,11 @@
       "name": "Dell Vostro 3400",
       "description": "Convertible laptop with touch screen",
       "price": 1099,
-      "image": "https://i.ebayimg.com/images/g/~kQAAOSw88BnFn~t/s-l400.webp",
+      "images": [
+        "https://i.ebayimg.com/images/g/~kQAAOSw88BnFn~t/s-l400.webp",
+        "https://i.ebayimg.com/images/g/XkQAAOSw88BnFn~t/s-l400.webp",
+        "https://i.ebayimg.com/images/g/YkQAAOSw88BnFn~t/s-l400.webp"
+      ],
       "categoryId": 2,
       "brandId": 4
     },
@@ -177,108 +221,156 @@
       "name": "Casual Checkered Shirt",
       "description": "Comfortable and stylish for daily wear",
       "price": 45,
-      "image": "https://i.ebayimg.com/images/g/4KcAAOSwhcNaXnAe/s-l500.webp",
+      "images": [
+        "https://i.ebayimg.com/images/g/4KcAAOSwhcNaXnAe/s-l500.webp",
+        "https://i.ebayimg.com/images/g/5KcAAOSwhcNaXnAe/s-l500.webp",
+        "https://i.ebayimg.com/images/g/6KcAAOSwhcNaXnAe/s-l500.webp"
+      ],
       "categoryId": 3,
-      "brandId": 5
+      "brandId": 7
     },
     {
       "id": 8,
       "name": "Slim Fit Dress Shirt",
       "description": "Perfect for formal occasions",
       "price": 60,
-      "image": "https://i.ebayimg.com/images/g/uQYAAOSw3lpme4aC/s-l1600.webp",
+      "images": [
+        "https://i.ebayimg.com/images/g/uQYAAOSw3lpme4aC/s-l1600.webp",
+        "https://i.ebayimg.com/images/g/uRYAAOSw3lpme4aC/s-l1600.webp",
+        "https://i.ebayimg.com/images/g/uTYAAOSw3lpme4aC/s-l1600.webp"
+      ],
       "categoryId": 3,
-      "brandId": 5
+      "brandId": 9
     },
     {
       "id": 9,
       "name": "Linen Summer Shirt",
       "description": "Light and breathable for hot weather",
       "price": 50,
-      "image": "https://i.ebayimg.com/images/g/qW4AAOSwNFlk5Yb5/s-l300.webp",
+      "images": [
+        "https://i.ebayimg.com/images/g/qW4AAOSwNFlk5Yb5/s-l300.webp",
+        "https://i.ebayimg.com/images/g/rW4AAOSwNFlk5Yb5/s-l300.webp",
+        "https://i.ebayimg.com/images/g/sW4AAOSwNFlk5Yb5/s-l300.webp"
+      ],
       "categoryId": 3,
-      "brandId": 5
+      "brandId": 8
     },
     {
       "id": 10,
       "name": "Floral Summer Dress",
       "description": "Light and colorful summer dress",
       "price": 80,
-      "image": "https://i.ebayimg.com/images/g/jA0AAOSw3uJmjrlp/s-l300.webp",
+      "images": [
+        "https://i.ebayimg.com/images/g/jA0AAOSw3uJmjrlp/s-l300.webp",
+        "https://i.ebayimg.com/images/g/kA0AAOSw3uJmjrlp/s-l300.webp",
+        "https://i.ebayimg.com/images/g/lA0AAOSw3uJmjrlp/s-l300.webp"
+      ],
       "categoryId": 4,
-      "brandId": 5
+      "brandId": 9
     },
     {
       "id": 11,
       "name": "Cocktail Dress",
       "description": "Elegant dress for evening events",
       "price": 120,
-      "image": "https://i.ebayimg.com/images/g/Xy0AAOSwIlli8N~-/s-l300.webp",
+      "images": [
+        "https://i.ebayimg.com/images/g/Xy0AAOSwIlli8N~-/s-l300.webp",
+        "https://i.ebayimg.com/images/g/Yy0AAOSwIlli8N~-/s-l300.webp",
+        "https://i.ebayimg.com/images/g/Zy0AAOSwIlli8N~-/s-l300.webp"
+      ],
       "categoryId": 4,
-      "brandId": 5
+      "brandId": 9
     },
     {
       "id": 12,
       "name": "Casual T-Shirt Dress",
       "description": "Simple and comfy for everyday wear",
       "price": 40,
-      "image": "https://i.ebayimg.com/images/g/KkQAAOSwI81ksShH/s-l300.webp",
+      "images": [
+        "https://i.ebayimg.com/images/g/KkQAAOSwI81ksShH/s-l300.webp",
+        "https://i.ebayimg.com/images/g/LkQAAOSwI81ksShH/s-l300.webp",
+        "https://i.ebayimg.com/images/g/MkQAAOSwI81ksShH/s-l300.webp"
+      ],
       "categoryId": 4,
-      "brandId": 5
+      "brandId": 8
     },
     {
       "id": 13,
       "name": "Velvet Dining Chair",
-      "description": "Velvet Dining Chair with Door Knocker Ring Windsor Dressing Room Chair 1/2/4/6",
+      "description": "Velvet Dining Chair with Door Knocker Ring Windsor Dressing Room Chair",
       "price": 120,
-      "image": "https://i.ebayimg.com/thumbs/images/g/HygAAOSwgbpfWgLG/s-l640.webp",
+      "images": [
+        "https://i.ebayimg.com/thumbs/images/g/HygAAOSwgbpfWgLG/s-l640.webp",
+        "https://i.ebayimg.com/thumbs/images/g/IygAAOSwgbpfWgLG/s-l640.webp",
+        "https://i.ebayimg.com/thumbs/images/g/JygAAOSwgbpfWgLG/s-l640.webp"
+      ],
       "categoryId": 5,
-      "brandId": 4
+      "brandId": 6
     },
     {
       "id": 14,
       "name": "Wooden Dining Table",
-      "description": "Classic Solid Wooden Dining Table and 4 or 2 Chairs Set Kitchen Home",
+      "description": "Classic Solid Wooden Dining Table and 4 or 2 Chairs Set",
       "price": 400,
-      "image": "https://i.ebayimg.com/thumbs/images/g/B24AAOSwaytdjMGv/s-l960.webp",
+      "images": [
+        "https://i.ebayimg.com/thumbs/images/g/B24AAOSwaytdjMGv/s-l960.webp",
+        "https://i.ebayimg.com/thumbs/images/g/C24AAOSwaytdjMGv/s-l960.webp",
+        "https://i.ebayimg.com/thumbs/images/g/D24AAOSwaytdjMGv/s-l960.webp"
+      ],
       "categoryId": 5,
-      "brandId": 4
+      "brandId": 6
     },
     {
       "id": 15,
-      "name": "Twin Upholstered",
-      "description": "Twin Upholstered 12ft, Metal Platform Bed Frame /With Steel Slats /No Box Spring",
+      "name": "Twin Upholstered Bed Frame",
+      "description": "Twin Upholstered 12ft, Metal Platform Bed Frame with Steel Slats",
       "price": 100,
-      "image": "https://i.ebayimg.com/images/g/1bUAAOSwXUJj2kI3/s-l300.webp",
+      "images": [
+        "https://i.ebayimg.com/images/g/1bUAAOSwXUJj2kI3/s-l300.webp",
+        "https://i.ebayimg.com/images/g/2bUAAOSwXUJj2kI3/s-l300.webp",
+        "https://i.ebayimg.com/images/g/3bUAAOSwXUJj2kI3/s-l300.webp"
+      ],
       "categoryId": 5,
-      "brandId": 4
+      "brandId": 10
     },
     {
       "id": 16,
       "name": "Dish Drainer Set",
       "description": "Sweet Home Collection 3-Piece Kitchen Sink Dish Drainer Set - Assorted Colors",
       "price": 600,
-      "image": "https://i.ebayimg.com/images/g/J6EAAOSwNqpfdjTC/s-l300.webp",
+      "images": [
+        "https://i.ebayimg.com/images/g/J6EAAOSwNqpfdjTC/s-l300.webp",
+        "https://i.ebayimg.com/images/g/K6EAAOSwNqpfdjTC/s-l300.webp",
+        "https://i.ebayimg.com/images/g/L6EAAOSwNqpfdjTC/s-l300.webp"
+      ],
       "categoryId": 6,
-      "brandId": 3
+      "brandId": 11
     },
     {
       "id": 17,
-      "name": "Induction cooker",
-      "description": "2 In 1 Electric 2-Burner Cooker (Induction+Ceramic) Touch Control Countertop",
+      "name": "Induction Cooker",
+      "description": "2 In 1 Electric 2-Burner Cooker (Induction + Ceramic) Touch Control Countertop",
       "price": 800,
-      "image": "https://i.ebayimg.com/images/g/VIcAAOSwn9BgnlAO/s-l300.webp",
+      "images": [
+        "https://i.ebayimg.com/images/g/VIcAAOSwn9BgnlAO/s-l300.webp",
+        "https://i.ebayimg.com/images/g/WIcAAOSwn9BgnlAO/s-l300.webp",
+        "https://i.ebayimg.com/images/g/XIcAAOSwn9BgnlAO/s-l300.webp"
+      ],
       "categoryId": 6,
-      "brandId": 3
+      "brandId": 5
     },
     {
       "id": 18,
       "name": "Commercial Blender Mixer",
       "description": "Heavy Duty Commercial Blender Mixer Power Smoothie Juicer Shakes Maker 2200W",
       "price": 200,
-      "image": "https://i.ebayimg.com/images/g/GewAAOSwnyJkyIQB/s-l300.webp",
+      "images": [
+        "https://i.ebayimg.com/images/g/GewAAOSwnyJkyIQB/s-l300.webp",
+        "https://i.ebayimg.com/images/g/HEwAAOSwnyJkyIQB/s-l300.webp",
+        "https://i.ebayimg.com/images/g/IEwAAOSwnyJkyIQB/s-l300.webp"
+      ],
       "categoryId": 6,
-      "brandId": 3
+      "brandId": 5
     }
   ]
 }
