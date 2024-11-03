@@ -1,23 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useDataContext } from '../../context/Context';
 
 export default function NavBar() {
-  const [primaryCategories, setPrimaryCategories] = useState([]);
-
-  // Gọi API để lấy danh sách primaryCategories
-  useEffect(() => {
-    const fetchPrimaryCategories = async () => {
-      try {
-        const response = await axios.get(
-          'http://localhost:9999/primaryCategories'
-        );
-        setPrimaryCategories(response.data); // Lưu dữ liệu từ API vào state
-      } catch (error) {
-        console.error('Error fetching primary categories:', error);
-      }
-    };
-    fetchPrimaryCategories();
-  }, []);
+  const { primaryCategories, setPrimaryCategories } = useDataContext();
 
   return (
     <nav className="bg-white border-b border-gray-300">
@@ -32,13 +18,13 @@ export default function NavBar() {
             Saved
           </a>
         </li>
-        {primaryCategories.map((category) => (
-          <li key={category.id} className="whitespace-nowrap">
+        {primaryCategories.map((primaryCategory) => (
+          <li key={primaryCategory.id} className="whitespace-nowrap">
             <a
-              href={`/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
+              href={`/${primaryCategory.id}`}
               className="hover:text-blue-600 hover:underline"
             >
-              {category.name}
+              {primaryCategory.name}
             </a>
           </li>
         ))}

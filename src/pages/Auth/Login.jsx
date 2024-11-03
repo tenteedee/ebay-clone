@@ -19,11 +19,11 @@ export default function LoginPage() {
     e.preventDefault();
 
     try {
-      const response = await axios.get('http://localhost:9999/user', {
+      const response = await axios.post('http://localhost:9999/user', {
         params: {
           email,
-          password
-        }
+          password,
+        },
       });
 
       if (response.data.length > 0) {
@@ -42,12 +42,17 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md flex justify-between">
-        <Link to="/" >
-          <span className="text-blue-600 font-medium text-sm hover:text-blue-500 underline">Back to Home</span>
+        <Link to="/">
+          <span className="text-blue-600 font-medium text-sm hover:text-blue-500 underline">
+            Back to Home
+          </span>
         </Link>
         <div className="text-right text-sm">
           Don't have an account?{' '}
-          <Link to="/register" className="font-medium text-blue-600 hover:text-blue-500 underline">
+          <Link
+            to="/register"
+            className="font-medium text-blue-600 hover:text-blue-500 underline"
+          >
             Register
           </Link>
         </div>
@@ -58,10 +63,15 @@ export default function LoginPage() {
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
             Sign in to your account
           </h2>
-          {errorMessage && <p className="text-red-500 text-sm text-center">{errorMessage}</p>}
+          {errorMessage && (
+            <p className="text-red-500 text-sm text-center">{errorMessage}</p>
+          )}
           <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Email address
               </label>
               <input
@@ -77,7 +87,10 @@ export default function LoginPage() {
               />
             </div>
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+              <label
+                htmlFor="password"
+                className="block text-sm font-medium text-gray-700"
+              >
                 Password
               </label>
               <div className="mt-1 relative rounded-md shadow-sm">

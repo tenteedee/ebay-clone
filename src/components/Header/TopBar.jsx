@@ -23,7 +23,9 @@ export default function TopBar() {
           {user ? (
             <>
               <span>
-                Hi, <span className="text-blue-600 underline">{user.fullname}</span>!
+                Hi,{' '}
+                <span className="text-blue-600 underline">{user.fullname}</span>
+                !
               </span>
               <button
                 onClick={handleLogout}

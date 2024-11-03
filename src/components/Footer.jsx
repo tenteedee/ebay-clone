@@ -59,10 +59,12 @@ export default function Footer() {
             onChange={(e) => setCountry(e.target.value)}
             className="p-2 border rounded"
           >
-            <option value="United States">United States</option>
-            <option value="United Kingdom">United Kingdom</option>
-            <option value="Germany">Germany</option>
-            <option value="Australia">Australia</option>
+            <option value="vn">Vietnam</option>
+            <option value="us">United States</option>
+            <option value="uk">United Kingdom</option>
+            <option value="ge">Germany</option>
+            <option value="au">Australia</option>
+            <option value="jp">Japan</option>
             {/* Add more countries as needed */}
           </select>
         </div>

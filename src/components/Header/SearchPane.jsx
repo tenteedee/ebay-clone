@@ -1,30 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useDataContext } from '../../context/Context';
 
 export default function SearchPane() {
   const [category, setCategory] = useState('All Categories');
   const [searchTerm, setSearchTerm] = useState('');
-  const [primaryCategories, setPrimaryCategories] = useState([]);
-  const [categories, setCategories] = useState([]);
-
-  useEffect(() => {
-    // Gọi API để lấy danh sách primaryCategories và categories
-    const fetchCategories = async () => {
-      try {
-        const primaryResponse = await axios.get('http://localhost:9999/primaryCategories');
-        const categoriesResponse = await axios.get('http://localhost:9999/categories');
-        setPrimaryCategories(primaryResponse.data);
-        setCategories(categoriesResponse.data);
-      } catch (error) {
-        console.error('Error fetching categories:', error);
-      }
-    };
-    fetchCategories();
-  }, []);
+  const { primaryCategories, categories } = useDataContext();
 
   // Lấy các categories tương ứng với mỗi primaryCategoryId
   const getCategoriesForPrimary = (primaryCategoryId) => {
-    return categories.filter(cat => cat.primaryCategoryId === primaryCategoryId);
+    return categories.filter(
+      (cat) => cat.primaryCategoryId === primaryCategoryId
+    );
   };
 
   return (
@@ -48,15 +35,17 @@ export default function SearchPane() {
                   {/* Primary Category in đậm */}
                   <div className="font-bold mb-2">{primaryCategory.name}</div>
                   {/* Các categories tương ứng */}
-                  {getCategoriesForPrimary(primaryCategory.id).map((category) => (
-                    <a
-                      key={category.id}
-                      href={`/category/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      {category.name}
-                    </a>
-                  ))}
+                  {getCategoriesForPrimary(primaryCategory.id).map(
+                    (category) => (
+                      <a
+                        key={category.id}
+                        href={`/${primaryCategory.id}/${category.id}`}
+                        className="block px-4 py-2 hover:bg-gray-100"
+                      >
+                        {category.name}
+                      </a>
+                    )
+                  )}
                 </div>
               ))}
             </div>

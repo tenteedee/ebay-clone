@@ -25,121 +25,114 @@
   "primaryCategories": [
     {
       "id": 1,
-      "name": "Electronics"
+      "name": "Electronics",
+      "url": "electronics",
+      "image": "https://cdn-icons-png.flaticon.com/512/2886/2886977.png"
     },
     {
       "id": 2,
-      "name": "Fashion"
+      "name": "Fashion",
+      "url": "fashion",
+      "image": "https://cdn-icons-png.flaticon.com/512/2886/2886977.png"
     },
     {
       "id": 3,
-      "name": "Home Supplies"
+      "name": "Home Supplies",
+      "url": "home-supplies",
+      "image": "https://cdn-icons-png.flaticon.com/512/2886/2886977.png"
     }
   ],
   "categories": [
     {
       "id": 1,
       "name": "Smartphones",
-      "primaryCategoryId": 1
+      "primaryCategoryId": 1,
+      "image": "https://i.ebayimg.com/thumbs/images/g/QxsAAOSw57tlqAb6/s-l640.webp"
     },
     {
       "id": 2,
       "name": "Laptops",
-      "primaryCategoryId": 1
+      "primaryCategoryId": 1,
+      "image": "https://i.ebayimg.com/thumbs/images/g/IV0AAOSwM9dlqAcY/s-l640.webp"
     },
     {
       "id": 3,
       "name": "Men's Shirts",
-      "primaryCategoryId": 2
+      "primaryCategoryId": 2,
+      "image": "https://i.ebayimg.com/images/g/x7UAAOSwAFBisNfB/s-l500.webp"
     },
     {
       "id": 4,
       "name": "Women's Dresses",
-      "primaryCategoryId": 2
+      "primaryCategoryId": 2,
+      "image": "https://i.ebayimg.com/thumbs/images/g/XsUAAOSwe-5e7xmi/s-l225.webp"
     },
     {
       "id": 5,
-      "name": "Blenders",
-      "primaryCategoryId": 3
+      "name": "Furnitures",
+      "primaryCategoryId": 3,
+      "image": "https://i.ebayimg.com/images/g/vF0AAOSwaBNkv0db/s-l1600.webp"
     },
     {
       "id": 6,
-      "name": "Vacuum Cleaners",
-      "primaryCategoryId": 3
+      "name": "Kitchen, Dining & Bar",
+      "primaryCategoryId": 3,
+      "image": "https://i.ebayimg.com/images/g/sSAAAOSwG-diPZPf/s-l300.webp"
     }
   ],
   "brands": [
     {
       "id": 1,
       "name": "Apple",
-      "categoryIds": [
-        1,
-        2
-      ]
+      "categoryIds": [1, 2]
     },
     {
       "id": 2,
       "name": "Samsung",
-      "categoryIds": [
-        1,
-        2
-      ]
+      "categoryIds": [1, 2]
     },
     {
       "id": 3,
       "name": "Google",
-      "categoryIds": [
-        1,
-        2
-      ]
+      "categoryIds": [1, 2]
     },
     {
       "id": 4,
       "name": "Dell",
-      "categoryIds": [
-        1,
-        2
-      ]
+      "categoryIds": [1, 2]
     },
     {
       "id": 5,
-      "name": "Dyson",
-      "categoryIds": [
-        6
-      ]
+      "name": "Blue Stone",
+      "categoryIds": [6]
     },
     {
       "id": 6,
-      "name": "NutriBullet",
-      "categoryIds": [
-        5
-      ]
+      "name": "Arhaus",
+      "categoryIds": [5]
     },
     {
       "id": 7,
       "name": "Zara",
-      "categoryIds": [
-        3,
-        4
-      ]
+      "categoryIds": [3, 4]
     }
   ],
   "products": [
     {
       "id": 1,
-      "name": "iPhone 13",
+      "name": "iPhone 12 Pro Max",
       "description": "Latest model with A15 chip",
       "price": 999,
-      "image": "https://example.com/images/iphone13.jpg",
+      "image": "https://i.ebayimg.com/images/g/vhsAAOSwQW1iuuya/s-l640.jpg",
       "categoryId": 1,
       "brandId": 1
     },
     {
       "id": 2,
-      "name": "Samsung Galaxy S21",
+      "name": "Samsung Galaxy S22 Ultra",
       "description": "High-performance Android smartphone",
       "price": 850,
-      "image": "https://example.com/images/galaxys21.jpg",
+      "image": "https://i.ebayimg.com/images/g/pNIAAOSwOaJmE8PM/s-l64.webp",
       "categoryId": 1,
       "brandId": 2
     },
@@ -148,7 +141,7 @@
       "name": "Google Pixel 6",
       "description": "Google's flagship with stock Android",
       "price": 799,
-      "image": "https://example.com/images/pixel6.jpg",
+      "image": "https://i.ebayimg.com/images/g/IG4AAOSwD5JnG7Zx/s-l500.webp",
       "categoryId": 1,
       "brandId": 3
     },
@@ -157,7 +150,7 @@
       "name": "MacBook Air M1",
       "description": "Apple's lightweight laptop with M1 chip",
       "price": 999,
-      "image": "https://example.com/images/macbookair.jpg",
+      "image": "https://i.ebayimg.com/images/g/ZkEAAOSwW-Bmo-jx/s-l400.webp",
       "categoryId": 2,
       "brandId": 1
     },
@@ -166,16 +159,16 @@
       "name": "Dell XPS 13",
       "description": "Ultra-thin, powerful laptop",
       "price": 1199,
-      "image": "https://example.com/images/dellxps13.jpg",
+      "image": "https://i.ebayimg.com/images/g/re4AAOSwS8Zm8sHo/s-l400.webp",
       "categoryId": 2,
       "brandId": 4
     },
     {
       "id": 6,
-      "name": "Dell Inspiron 15",
+      "name": "Dell Vostro 3400",
       "description": "Convertible laptop with touch screen",
       "price": 1099,
-      "image": "https://example.com/images/hpspectre.jpg",
+      "image": "https://i.ebayimg.com/images/g/~kQAAOSw88BnFn~t/s-l400.webp",
       "categoryId": 2,
       "brandId": 4
     },
@@ -184,7 +177,7 @@
       "name": "Casual Checkered Shirt",
       "description": "Comfortable and stylish for daily wear",
       "price": 45,
-      "image": "https://example.com/images/casualshirt.jpg",
+      "image": "https://i.ebayimg.com/images/g/4KcAAOSwhcNaXnAe/s-l500.webp",
       "categoryId": 3,
       "brandId": 5
     },
@@ -193,7 +186,7 @@
       "name": "Slim Fit Dress Shirt",
       "description": "Perfect for formal occasions",
       "price": 60,
-      "image": "https://example.com/images/slimfitshirt.jpg",
+      "image": "https://i.ebayimg.com/images/g/uQYAAOSw3lpme4aC/s-l1600.webp",
       "categoryId": 3,
       "brandId": 5
     },
@@ -202,7 +195,7 @@
       "name": "Linen Summer Shirt",
       "description": "Light and breathable for hot weather",
       "price": 50,
-      "image": "https://example.com/images/linenshirt.jpg",
+      "image": "https://i.ebayimg.com/images/g/qW4AAOSwNFlk5Yb5/s-l300.webp",
       "categoryId": 3,
       "brandId": 5
     },
@@ -211,7 +204,7 @@
       "name": "Floral Summer Dress",
       "description": "Light and colorful summer dress",
       "price": 80,
-      "image": "https://example.com/images/summerdress.jpg",
+      "image": "https://i.ebayimg.com/images/g/jA0AAOSw3uJmjrlp/s-l300.webp",
       "categoryId": 4,
       "brandId": 5
     },
@@ -220,7 +213,7 @@
       "name": "Cocktail Dress",
       "description": "Elegant dress for evening events",
       "price": 120,
-      "image": "https://example.com/images/cocktaildress.jpg",
+      "image": "https://i.ebayimg.com/images/g/Xy0AAOSwIlli8N~-/s-l300.webp",
       "categoryId": 4,
       "brandId": 5
     },
@@ -229,61 +222,61 @@
       "name": "Casual T-Shirt Dress",
       "description": "Simple and comfy for everyday wear",
       "price": 40,
-      "image": "https://example.com/images/tshirtdress.jpg",
+      "image": "https://i.ebayimg.com/images/g/KkQAAOSwI81ksShH/s-l300.webp",
       "categoryId": 4,
       "brandId": 5
     },
     {
       "id": 13,
-      "name": "NutriBullet Pro",
-      "description": "Powerful blender for smoothies",
+      "name": "Velvet Dining Chair",
+      "description": "Velvet Dining Chair with Door Knocker Ring Windsor Dressing Room Chair 1/2/4/6",
       "price": 120,
-      "image": "https://example.com/images/nutribullet.jpg",
+      "image": "https://i.ebayimg.com/thumbs/images/g/HygAAOSwgbpfWgLG/s-l640.webp",
       "categoryId": 5,
       "brandId": 4
     },
     {
       "id": 14,
-      "name": "Vitamix 5200",
-      "description": "Professional-grade blender",
+      "name": "Wooden Dining Table",
+      "description": "Classic Solid Wooden Dining Table and 4 or 2 Chairs Set Kitchen Home",
       "price": 400,
-      "image": "https://example.com/images/vitamix.jpg",
+      "image": "https://i.ebayimg.com/thumbs/images/g/B24AAOSwaytdjMGv/s-l960.webp",
       "categoryId": 5,
       "brandId": 4
     },
     {
       "id": 15,
-      "name": "Oster Pro 1200",
-      "description": "Versatile blender with food processing capability",
+      "name": "Twin Upholstered",
+      "description": "Twin Upholstered 12ft, Metal Platform Bed Frame /With Steel Slats /No Box Spring",
       "price": 100,
-      "image": "https://example.com/images/oster.jpg",
+      "image": "https://i.ebayimg.com/images/g/1bUAAOSwXUJj2kI3/s-l300.webp",
       "categoryId": 5,
       "brandId": 4
     },
     {
       "id": 16,
-      "name": "Dyson V11",
-      "description": "High-performance cordless vacuum",
+      "name": "Dish Drainer Set",
+      "description": "Sweet Home Collection 3-Piece Kitchen Sink Dish Drainer Set - Assorted Colors",
       "price": 600,
-      "image": "https://example.com/images/dysonv11.jpg",
+      "image": "https://i.ebayimg.com/images/g/J6EAAOSwNqpfdjTC/s-l300.webp",
       "categoryId": 6,
       "brandId": 3
     },
     {
       "id": 17,
-      "name": "Roomba i7+",
-      "description": "Robot vacuum with self-emptying capability",
+      "name": "Induction cooker",
+      "description": "2 In 1 Electric 2-Burner Cooker (Induction+Ceramic) Touch Control Countertop",
       "price": 800,
-      "image": "https://example.com/images/roomba.jpg",
+      "image": "https://i.ebayimg.com/images/g/VIcAAOSwn9BgnlAO/s-l300.webp",
       "categoryId": 6,
       "brandId": 3
     },
     {
       "id": 18,
-      "name": "Shark Navigator",
-      "description": "Upright vacuum with powerful suction",
+      "name": "Commercial Blender Mixer",
+      "description": "Heavy Duty Commercial Blender Mixer Power Smoothie Juicer Shakes Maker 2200W",
       "price": 200,
-      "image": "https://example.com/images/sharknavigator.jpg",
+      "image": "https://i.ebayimg.com/images/g/GewAAOSwnyJkyIQB/s-l300.webp",
       "categoryId": 6,
       "brandId": 3
     }
