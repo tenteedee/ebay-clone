@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useDataContext } from '../../context/Context';
+import { useEbayContext } from '../../context/Context';
 
 export default function NavBar() {
-  const { primaryCategories, setPrimaryCategories } = useDataContext();
+  const { primaryCategories, setPrimaryCategories } = useEbayContext();
 
   return (
     <nav className="bg-white border-b border-gray-300">

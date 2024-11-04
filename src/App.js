@@ -15,9 +15,9 @@ import Login from './pages/Auth/Login.jsx';
 import CategoriesPage from './pages/Products/CategoriesPage.jsx';
 import ProductsListPage from './pages/Products/ProductsListPage.jsx';
 import ProductDetail from './pages/Products/ProductDetail.jsx';
-import Cart from './pages/Products/Cart';
-import ConfirmOrder from './pages/Products/ConfirmOrder';
-import OrderCompleted from './pages/Products/OrderCompleted';
+import Cart from './pages/Order/Cart.jsx';
+import ConfirmOrder from './pages/Order/ConfirmOrder.jsx';
+import OrderCompleted from './pages/Order/OrderCompleted.jsx';
 
 function App() {
   const location = useLocation();

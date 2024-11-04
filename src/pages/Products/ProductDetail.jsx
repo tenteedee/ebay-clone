@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { useDataContext } from '../../context/Context';
+import { useEbayContext } from '../../context/Context';
 import { useNavigate } from 'react-router-dom';
 
 export default function ProductDetail() {
@@ -8,7 +8,7 @@ export default function ProductDetail() {
   const { id } = useParams();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);
-  const { products, brands, categories, addToCart } = useDataContext();
+  const { products, brands, categories, addToCart } = useEbayContext();
 
   const product = products.find((item) => item.id == id);
 

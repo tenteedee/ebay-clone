@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useDataContext } from '../../context/Context';
+import { useEbayContext } from '../../context/Context';
 
 function Cart() {
   const [user, setUser] = useState(null);
-  const { cart, setCart, removeFromCart } = useDataContext();
+  const { cart, setCart, removeFromCart } = useEbayContext();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -29,6 +29,15 @@ function Cart() {
       );
     }
     alert("You've updated your cart");
+  };
+
+  const handleRemove = (id, name) => {
+    const confirmed = window.confirm(
+      `Are you sure you want to remove ${name} from your cart?`
+    );
+    if (confirmed) {
+      removeFromCart(id);
+    }
   };
 
   const handleCheckout = () => {
@@ -67,7 +76,7 @@ function Cart() {
                 <div className="mt-2">
                   <button
                     className="text-blue-600 hover:underline text-sm"
-                    onClick={() => removeFromCart(item.id)}
+                    onClick={() => handleRemove(item.id, item.name)}
                   >
                     Remove
                   </button>

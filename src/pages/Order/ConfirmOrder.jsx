@@ -1,22 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { useDataContext } from '../../context/Context';
+import { useEbayContext } from '../../context/Context';
 
 export default function ConfirmOrder() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { products } = useDataContext();
+  const { products } = useEbayContext();
   const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
-    // Retrieve selected product and quantity from localStorage or state
     const savedOrder = JSON.parse(localStorage.getItem('selectedOrder'));
     if (savedOrder && savedOrder.productId === parseInt(id)) {
       setProduct(savedOrder.product);
       setQuantity(savedOrder.quantity);
     } else {
-      // Fetch product from context if not in localStorage
       const selectedProduct = products.find((item) => item.id == id);
       if (selectedProduct) {
         setProduct(selectedProduct);
@@ -27,7 +25,6 @@ export default function ConfirmOrder() {
   if (!product) return <p>Loading...</p>;
 
   const handleConfirmOrder = () => {
-    // alert('Your order has been confirmed!');
     localStorage.removeItem('selectedOrder');
     navigate('/order-completed');
   };
@@ -37,20 +34,22 @@ export default function ConfirmOrder() {
   };
 
   return (
-    <div className="max-w-3xl mx-auto p-4">
+    <div className="max-w-4xl mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">Confirm Your Order</h1>
-      <div className="flex space-x-4">
+      <div className="flex space-x-6">
         {/* Product Image */}
-        <div className="w-1/3">
-          <img
-            src={product.images[0]}
-            alt={product.name}
-            className="w-full h-full object-cover rounded"
-          />
+        <div className="w-1/2">
+          <div className="relative w-full h-80 overflow-hidden rounded">
+            <img
+              src={product.images[0]}
+              alt={product.name}
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
 
         {/* Order Summary */}
-        <div className="w-2/3">
+        <div className="w-1/2">
           <h2 className="text-xl font-semibold">{product.name}</h2>
           <p className="text-gray-600">
             Price: ${product.price.toLocaleString()}
